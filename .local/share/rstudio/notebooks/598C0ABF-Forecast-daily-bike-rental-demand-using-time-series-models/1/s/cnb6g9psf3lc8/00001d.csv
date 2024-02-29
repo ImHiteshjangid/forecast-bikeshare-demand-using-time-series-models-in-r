@@ -1,0 +1,20 @@
+"0","## Import required packages"
+"0","library(""tidyverse"")"
+"0","library(""ggplot2"")"
+"0","library(""dbplyr"")"
+"0","library(""timetk"")"
+"0","library(""tseries"")"
+"2","Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+"
+"2","
+    ‘tseries’ version: 0.10-53
+
+    ‘tseries’ is a package for time series analysis and computational finance.
+
+    See ‘library(help=""tseries"")’ for details.
+
+"
+"0","library(""forecast"")"
+"0",""

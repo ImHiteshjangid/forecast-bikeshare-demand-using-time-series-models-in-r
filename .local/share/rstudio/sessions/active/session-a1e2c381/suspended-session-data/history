@@ -1,0 +1,112 @@
+## Import required packages
+library("tidyverse")
+## Import required packages
+library(tidyverse)
+## Import required packages
+library("tidyverse")
+## Import required packages
+library("tidyverse")
+library("ggplot2")
+install.packages("tidyverse")
+## Import required packages
+library("tidyverse")
+library("ggplot2")
+library("dbplyr")
+library("timetk")
+install.packages("timetk")
+## Import required packages
+library("tidyverse")
+library("ggplot2")
+library("dbplyr")
+library("timetk")
+library("tseries")
+library("forecast")
+day_data <- read.csv("day.csv")
+## Import required packages
+library("tidyverse")
+library("ggplot2")
+library("dbplyr")
+library("timetk")
+library("tseries")
+library("forecast")
+day_data <- read.csv("day.csv")
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+# Download the zip file
+temp <- tempfile()
+download.file(url, temp)
+# Unzip the file
+unzip(temp, "day.csv")
+# Read the csv file
+day_data <- read.csv("day.csv")
+# Clean up
+unlink(temp)
+## Import required packages
+library("tidyverse")
+library("ggplot2")
+library("dbplyr")
+library("timetk")
+library("tseries")
+library("forecast")
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+# Download the zip file
+temp <- tempfile()
+download.file(url, temp)
+# Unzip the file
+unzip(temp, "day.csv")
+# Read the csv file
+day_data <- read.csv("day.csv")
+# Clean up
+unlink(temp)
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+# Download the zip file
+temp <- tempfile()
+download.file(url, temp)
+# Unzip the file
+unzip(temp, "day.csv")
+# Read the csv file
+day_data <- read.csv("day.csv")
+# Clean up
+unlink(temp)
+# Explore data
+day_data[,"dteday"] <- as.Date(day_data[,"dteday"])
+day_data[,"ncnt"] <- day_data[,"cnt"] / max(day_data[,"cnt"])
+day_data[,"nr"] <- day_data[,"registered"] / max(day_data[,"registered"])
+day_data[,"rr"] <- day_data[,"cnt"] / max(day_data[,"registered"])
+summary(day_data)
+## Read about the timetk package
+# ?timetk
+day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature",
+.title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+## Import required packages
+library("tidyverse")
+library("ggplot2")
+library("dbplyr")
+library("timetk")
+library("tseries")
+library("forecast")
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+# Download the zip file
+temp <- tempfile()
+download.file(url, temp)
+# Unzip the file
+unzip(temp, "day.csv")
+# Read the csv file
+day_data <- read.csv("day.csv")
+# Clean up
+unlink(temp)
+# Explore data
+day_data[,"dteday"] <- as.Date(day_data[,"dteday"])
+day_data[,"ncnt"] <- day_data[,"cnt"] / max(day_data[,"cnt"])
+day_data[,"nr"] <- day_data[,"registered"] / max(day_data[,"registered"])
+day_data[,"rr"] <- day_data[,"cnt"] / max(day_data[,"registered"])
+summary(day_data)
+## Read about the timetk package
+# ?timetk
+day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature",
+.title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+## Read about the timetk package
+# ?timetk
+day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature",
+.title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+day_data %>% group_by(yr) %>% plot_time_series(dteday, hum, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Humidity",
+.title = "Normalized Humidity vs Date for Day Data", .interactive = TRUE)

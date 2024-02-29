@@ -1,0 +1,220 @@
+1709105432894:## Import required packages
+1709105433014:library("tidyverse")
+1709105494689:## Import required packages
+1709105494740:library(tidyverse)
+1709105513164:## Import required packages
+1709105513220:library("tidyverse")
+1709105736063:## Import required packages
+1709105736115:library("tidyverse")
+1709105746508:library("ggplot2")
+1709105829295:install.packages("tidyverse")
+1709105883850:## Import required packages
+1709105883903:library("tidyverse")
+1709105884664:library("ggplot2")
+1709105884711:library("dbplyr")
+1709105885055:library("timetk")
+1709105912434:install.packages("timetk")
+1709106032264:## Import required packages
+1709106032321:library("tidyverse")
+1709106032373:library("ggplot2")
+1709106032424:library("dbplyr")
+1709106032474:library("timetk")
+1709106034225:library("tseries")
+1709106034367:library("forecast")
+1709106141915:day_data <- read.csv("day.csv")
+1709106311547:## Import required packages
+1709106311601:library("tidyverse")
+1709106311658:library("ggplot2")
+1709106311707:library("dbplyr")
+1709106311755:library("timetk")
+1709106311805:library("tseries")
+1709106311854:library("forecast")
+1709106384597:day_data <- read.csv("day.csv")
+1709106601509:url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+1709106601605:# Download the zip file
+1709106601667:temp <- tempfile()
+1709106601722:download.file(url, temp)
+1709106602744:# Unzip the file
+1709106602796:unzip(temp, "day.csv")
+1709106602918:# Read the csv file
+1709106602970:day_data <- read.csv("day.csv")
+1709106603091:# Clean up
+1709106603144:unlink(temp)
+1709106815668:## Import required packages
+1709106815724:library("tidyverse")
+1709106815775:library("ggplot2")
+1709106815828:library("dbplyr")
+1709106815879:library("timetk")
+1709106815928:library("tseries")
+1709106815980:library("forecast")
+1709106825013:url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+1709106825112:# Download the zip file
+1709106825161:temp <- tempfile()
+1709106825211:download.file(url, temp)
+1709106826015:# Unzip the file
+1709106826064:unzip(temp, "day.csv")
+1709106826201:# Read the csv file
+1709106826248:day_data <- read.csv("day.csv")
+1709106826361:# Clean up
+1709106826411:unlink(temp)
+1709106888428:url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+1709106888534:# Download the zip file
+1709106888585:temp <- tempfile()
+1709106888639:download.file(url, temp)
+1709106889498:# Unzip the file
+1709106889549:unzip(temp, "day.csv")
+1709106889669:# Read the csv file
+1709106889718:day_data <- read.csv("day.csv")
+1709106889828:# Clean up
+1709106889878:unlink(temp)
+1709106889975:# Explore data
+1709106890023:day_data[,"dteday"] <- as.Date(day_data[,"dteday"])
+1709106890092:day_data[,"ncnt"] <- day_data[,"cnt"] / max(day_data[,"cnt"])
+1709106890156:day_data[,"nr"] <- day_data[,"registered"] / max(day_data[,"registered"])
+1709106890220:day_data[,"rr"] <- day_data[,"cnt"] / max(day_data[,"registered"])
+1709106890279:summary(day_data)
+1709107006859:## Read about the timetk package
+1709107006980:# ?timetk
+1709107007031:day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature",
+1709107007086:.title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+1709129587495:## Import required packages
+1709129587543:library("tidyverse")
+1709129589109:library("ggplot2")
+1709129589157:library("dbplyr")
+1709129589543:library("timetk")
+1709129591317:library("tseries")
+1709129591484:library("forecast")
+1709129591914:url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+1709129592023:# Download the zip file
+1709129592091:temp <- tempfile()
+1709129592165:download.file(url, temp)
+1709129592950:# Unzip the file
+1709129593014:unzip(temp, "day.csv")
+1709129593169:# Read the csv file
+1709129593240:day_data <- read.csv("day.csv")
+1709129593368:# Clean up
+1709129593431:unlink(temp)
+1709129593535:# Explore data
+1709129593602:day_data[,"dteday"] <- as.Date(day_data[,"dteday"])
+1709129593690:day_data[,"ncnt"] <- day_data[,"cnt"] / max(day_data[,"cnt"])
+1709129593813:day_data[,"nr"] <- day_data[,"registered"] / max(day_data[,"registered"])
+1709129593874:day_data[,"rr"] <- day_data[,"cnt"] / max(day_data[,"registered"])
+1709129593938:summary(day_data)
+1709129595433:## Read about the timetk package
+1709129595482:# ?timetk
+1709129595535:day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature",
+1709129595590:.title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+1709129744560:## Read about the timetk package
+1709129744615:# ?timetk
+1709129744663:day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature",
+1709129744713:.title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+1709129746204:day_data %>% group_by(yr) %>% plot_time_series(dteday, hum, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Humidity",
+1709129746262:.title = "Normalized Humidity vs Date for Day Data", .interactive = TRUE)
+1709136751718:## Import required packages
+1709136751771:library("tidyverse")
+1709136792381:install.packages("tidyverse")
+1709136836274:## Import required packages
+1709136836323:library("tidyverse")
+1709136836956:library("ggplot2")
+1709136837005:library("dbplyr")
+1709136837051:library("timetk")
+1709136869494:install.packages("timetk")
+1709136997830:## Import required packages
+1709136997886:library("tidyverse")
+1709136997936:library("ggplot2")
+1709136997993:library("dbplyr")
+1709136998047:library("timetk")
+1709136999924:library("tseries")
+1709137000079:library("forecast")
+1709137066719:url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip"
+1709137066810:# Download the zip file
+1709137066859:temp <- tempfile()
+1709137066908:download.file(url, temp)
+1709137067865:# Unzip the file
+1709137067917:unzip(temp, "day.csv")
+1709137068045:# Read the csv file
+1709137068093:day_data <- read.csv("day.csv")
+1709137068200:# Clean up
+1709137068250:unlink(temp)
+1709137068338:# Explore data
+1709137068383:day_data[,"dteday"] <- as.Date(day_data[,"dteday"])
+1709137068449:day_data[,"ncnt"] <- day_data[,"cnt"] / max(day_data[,"cnt"])
+1709137068511:day_data[,"nr"] <- day_data[,"registered"] / max(day_data[,"registered"])
+1709137068574:day_data[,"rr"] <- day_data[,"cnt"] / max(day_data[,"registered"])
+1709137068634:summary(day_data)
+1709137112657:## Read about the timetk package
+1709137112702:# ?timetk
+1709137112742:day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature",
+1709137112786:.title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+1709137142668:day_data %>% group_by(yr) %>% plot_time_series(dteday, hum, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Humidity",
+1709137142706:.title = "Normalized Humidity vs Date for Day Data", .interactive = TRUE)
+1709137235715:day_data %>% group_by(yr) %>% plot_time_series(dteday, windspeed, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Windspeed",
+1709137235754:.title = "Windspeed vs Date for Day Data", .interactive = TRUE)
+1709137270747:day_data %>% group_by(yr) %>% plot_time_series(dteday, ncnt, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Bike Rentals",
+1709137270789:.title = "Normalized Bike Rentals vs Date for Day Data", .interactive = TRUE)
+1709137310024:day_data %>% group_by(yr) %>% plot_time_series(dteday, nr, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Registered Rentals",
+1709137310068:.title = "Normalized Registered Rentals vs Date for Day Data", .interactive = TRUE)
+1709137346318:day_data %>% group_by(yr) %>% plot_time_series(dteday, rr, .color_var = season, .x_lab = "Date", .y_lab = "Ratio",
+1709137346361:.title = "Ratio of Rentals to Registration vs Date for Day Data", .interactive = TRUE)
+1709137382816:day_data %>% group_by(yr) %>% plot_time_series(dteday, rr, .color_var = season, .x_lab = "Date", .y_lab = "Ratio",
+1709137382865:.title = "Ratio of Rentals to Registration vs Date for Day Data", .interactive = TRUE)
+1709137405167:day_data[,"temp"] <- tsclean(day_data[,"temp"])
+1709137405219:day_data[,"ncnt"] <- tsclean(day_data[,"ncnt"])
+1709137405271:day_data[,"nr"] <- tsclean(day_data[,"nr"])
+1709137405322:day_data[,"rr"] <- tsclean(day_data[,"rr"])
+1709137405367:head(day_data)
+1709137439862:day_data %>% group_by(yr) %>% plot_time_series(dteday, temp, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Temperature", .title = "Normalized Temperature vs Date for Day Data", .interactive = TRUE)
+1709137478869:day_data %>% group_by(yr) %>% plot_time_series(dteday, ncnt, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Bike Rentals", .title = "Normalized Bike Rentals vs Date for Day Data", .interactive = TRUE)
+1709137500290:day_data %>% group_by(yr) %>% plot_time_series(dteday, nr, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Registered Rentals", .title = "Normalized Registered Rentals vs Date for Day Data", .interactive = TRUE)
+1709137531720:day_data %>% group_by(yr) %>% plot_time_series(dteday, rr, .color_var = season, .x_lab = "Date", .y_lab = "Normalized Registered Rentals", .title = "Ratio of Rentals to Registration vs Date for Day Data", .interactive = TRUE)
+1709137558987:#day data
+1709137559046:day_data[,"temp"] %>% adf.test()
+1709137580058:day_data[,"ncnt"] %>% adf.test()
+1709137598176:day_data[,"nr"] %>% adf.test()
+1709137615514:day_data[,"rr"] %>% adf.test()
+1709137647458:#decomposes the data
+1709137647508:freq <- 365
+1709137647586:#normalized day rentals
+1709137647630:norm_rentals <- ts(day_data[, "nr"], frequency = freq)
+1709137647677:decomped1 <- stl(norm_rentals, "periodic")
+1709137647723:plot(decomped1$time.series[,2], ylab = "Stationary of the Normalized Rental Reservations",
+1709137647766:xlab = "Day of the Year")
+1709137668773:checkresiduals(decomped1$time.series[, 3])
+1709137706177:#normalized day counts
+1709137706223:norm_cnt <- ts(day_data[, "ncnt"], frequency = freq)
+1709137706275:decomped2 <- stl(norm_cnt, "periodic")
+1709137706326:plot(decomped2$time.series[,2], ylab = "Stationary of the Normalized Rental Counts",
+1709137706372:xlab = "Day of the Year")
+1709137725729:checkresiduals(decomped2$time.series[, 3])
+1709137749269:#normalized day rental rates
+1709137749310:norm_rr <- ts(day_data[, "rr"], frequency = freq)
+1709137749355:decomped3 <- stl(norm_rr, "periodic")
+1709137749403:plot(decomped3$time.series[,2], ylab = "Stationary of the Normalized Rental Counts to Reservations",
+1709137749452:xlab = "Day of the Year")
+1709137767671:checkresiduals(decomped3$time.series[, 3])
+1709137791791:#returns the stats
+1709137791834:print("-------Noramlized Rental Reservations")
+1709137822388:shapiro.test(decomped1$time.series[, 3])
+1709137838498:print("-------Normalized Count of Rentals")
+1709137852126:shapiro.test(decomped2$time.series[, 3])
+1709137866419:print("-------Normalized Ratio of Rentals to Reservations")
+1709137880704:shapiro.test(decomped3$time.series[, 3])
+1709137901188:#bike count predictions
+1709137901231:fit1 <- auto.arima(norm_cnt, seasonal = TRUE, )
+1709138088201:#bike count predictions
+1709138088256:fit1 <- auto.arima(norm_cnt, seasonal = TRUE, )
+1709138321778:hist(fit1$residuals, xlab = "Residual", ylab = "Distribution", main = "Histogram of Model Errors - Bike Count")
+1709138424020:shapiro.test(fit1$residuals)
+1709138444157:plot(prediction1, xlab = "Date", ylab = "Normalized Count of Rentals", main = "Prediction of Bike Rental Counts")
+1709138458240:prediction1 <- forecast(fit1, 25)
+1709138462030:plot(prediction1, xlab = "Date", ylab = "Normalized Count of Rentals", main = "Prediction of Bike Rental Counts")
+1709138478712:fit2 <- auto.arima(norm_rentals, seasonal = TRUE, )
+1709138640274:hist(fit2$residuals, xlab = "Residual", ylab = "Distribution", main = "Histogram of Model Errors - Rental Count")
+1709138646462:shapiro.test(fit2$residuals)
+1709138666423:prediction2 <- forecast(fit2, 25)
+1709138670213:plot(prediction2, xlab = "Date", ylab = "Normalized Rentals", main = "Prediction of Bike Rentals")
+1709138693632:fit2 <- auto.arima(norm_cnt, seasonal = TRUE, )
+1709138920947:hist(fit2$residuals, xlab = "Residual", ylab = "Distribution", main = "Histogram of Model Errors - Count to Rental Ratio")
+1709138961983:shapiro.test(fit2$residuals)
+1709138992988:prediction3 <- forecast(fit2, 25)
+1709138996579:plot(prediction3, xlab = "Date", ylab = "Normalized Rental Ratio", main = "Prediction of Bike Rentals to Reservations")

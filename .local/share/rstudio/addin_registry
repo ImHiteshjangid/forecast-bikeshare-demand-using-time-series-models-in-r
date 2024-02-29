@@ -1,0 +1,191 @@
+{
+    "clipr::clipr_output": {
+        "name": "Output to clipboard",
+        "package": "clipr",
+        "title": "",
+        "description": "Copies the console output of a selected expression to the system clipboard",
+        "interactive": false,
+        "binding": "clipr_output",
+        "ordinal": 2
+    },
+    "clipr::clipr_result": {
+        "name": "Value to clipboard",
+        "package": "clipr",
+        "title": "",
+        "description": "Copies the results of a selected expression to the system clipboard",
+        "interactive": false,
+        "binding": "clipr_result",
+        "ordinal": 1
+    },
+    "covr::addin_report": {
+        "name": "Calculate package test coverage",
+        "package": "covr",
+        "title": "",
+        "description": "Calculates the package test coverage and opens a report, using `covr::report()`",
+        "interactive": false,
+        "binding": "addin_report",
+        "ordinal": 17
+    },
+    "reprex::reprex_addin": {
+        "name": "Render reprex...",
+        "package": "reprex",
+        "title": "",
+        "description": "Run `reprex::reprex()` to prepare a reproducible example for sharing.",
+        "interactive": true,
+        "binding": "reprex_addin",
+        "ordinal": 14
+    },
+    "reprex::reprex_selection": {
+        "name": "Reprex selection",
+        "package": "reprex",
+        "title": "",
+        "description": "Prepare reprex from current selection",
+        "interactive": false,
+        "binding": "reprex_selection",
+        "ordinal": 15
+    },
+    "styler::set_style_transformers": {
+        "name": "Set style",
+        "package": "styler",
+        "title": "",
+        "description": "Prompt for and set the style transformers used by all styler addins",
+        "interactive": true,
+        "binding": "set_style_transformers",
+        "ordinal": 18
+    },
+    "styler::style_active_file": {
+        "name": "Style active file",
+        "package": "styler",
+        "title": "",
+        "description": "Pretty-print active file",
+        "interactive": true,
+        "binding": "style_active_file",
+        "ordinal": 20
+    },
+    "styler::style_active_pkg": {
+        "name": "Style active package",
+        "package": "styler",
+        "title": "",
+        "description": "Pretty-print active package",
+        "interactive": true,
+        "binding": "style_active_pkg",
+        "ordinal": 21
+    },
+    "styler::style_selection": {
+        "name": "Style selection",
+        "package": "styler",
+        "title": "",
+        "description": "Pretty-print selection",
+        "interactive": true,
+        "binding": "style_selection",
+        "ordinal": 19
+    },
+    "targets::rstudio_addin_tar_glimpse": {
+        "name": "Glimpse a targets pipeline",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_glimpse(). Requires a _targets.R configuration file and the visNetwork package.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_glimpse",
+        "ordinal": 8
+    },
+    "targets::rstudio_addin_tar_load": {
+        "name": "Load target at cursor",
+        "package": "targets",
+        "title": "",
+        "description": "Load the target identified by the symbol at the cursor position from the _targets data store.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_load",
+        "ordinal": 11
+    },
+    "targets::rstudio_addin_tar_make_bg": {
+        "name": "Run a targets pipeline in the background",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_make() in a background process. Requires a _targets.R configuration file.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_make_bg",
+        "ordinal": 5
+    },
+    "targets::rstudio_addin_tar_outdated": {
+        "name": "See outdated targets",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_outdated(). Requries a _targets.R configuration file",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_outdated",
+        "ordinal": 9
+    },
+    "targets::rstudio_addin_tar_progress": {
+        "name": "Print recent progress",
+        "package": "targets",
+        "title": "",
+        "description": "Run tar_progress() and print the tail() of the result.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_progress",
+        "ordinal": 10
+    },
+    "targets::rstudio_addin_tar_read": {
+        "name": "Read target at cursor",
+        "package": "targets",
+        "title": "",
+        "description": "Read the target identified by the symbol at the cursor position from the _targets data store.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_read",
+        "ordinal": 12
+    },
+    "targets::rstudio_addin_tar_target": {
+        "name": "Write target at cursor",
+        "package": "targets",
+        "title": "",
+        "description": "Write tar_target() at the cursor position.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_target",
+        "ordinal": 13
+    },
+    "targets::rstudio_addin_tar_visnetwork": {
+        "name": "Visualize a targets pipeline",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_visnetwork(). Requires a _targets.R configuration file and the visNetwork package.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_visnetwork",
+        "ordinal": 7
+    },
+    "targets::tar_edit": {
+        "name": "Edit _targets.R",
+        "package": "targets",
+        "title": "",
+        "description": "Open the file _targets.R for editing. Requires the usethis package.",
+        "interactive": false,
+        "binding": "tar_edit",
+        "ordinal": 3
+    },
+    "targets::tar_make": {
+        "name": "Run a targets pipeline in the foreground",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_make() in the current R process. Requires a _targets.R configuration file.",
+        "interactive": false,
+        "binding": "tar_make",
+        "ordinal": 4
+    },
+    "targets::tar_watch": {
+        "name": "Launch app to watch progress",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_watch(). Requires a _targets.R file and packages bs4Dash, pingr, shiny, and visNetwork.",
+        "interactive": false,
+        "binding": "tar_watch",
+        "ordinal": 6
+    },
+    "testit::insert_identical": {
+        "name": "Insert %==%",
+        "package": "testit",
+        "title": "",
+        "description": "Insert the infix operator %==% from testit.",
+        "interactive": false,
+        "binding": "insert_identical",
+        "ordinal": 16
+    }
+}
