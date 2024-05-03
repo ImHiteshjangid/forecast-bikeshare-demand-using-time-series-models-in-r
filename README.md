@@ -1,1 +1,1 @@
-# forecast-bikeshare-demand-using-time-series-models-in-r
+# Forecasting bikeshare demand using time series models in r
